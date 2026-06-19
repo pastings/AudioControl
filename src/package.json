@@ -1,0 +1,23 @@
+{
+  "name": "audiocontrol",
+  "version": "1.0.0",
+  "description": "Minimalist Desktop Spotify Controller HUD",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.audiocontrol.widget",
+    "productName": "AudioControl",
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
+  }
+}

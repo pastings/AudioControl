@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioControl</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="audiocontrol-container" id="widget-container">
+        
+        <div class="action-group">
+            <button class="icon-btn" id="lock-toggle" title="Lock Position">
+                <i class="ri-lock-unlock-line" id="lock-icon"></i>
+            </button>
+            <button class="icon-btn" id="settings-toggle" title="Themes">
+                <i class="ri-palette-line" id="settings-icon"></i>
+            </button>
+        </div>
+
+        <div class="track-info">
+            <div class="album-art-container">
+                <img id="album-art" src="" alt="Cover Art" class="hidden">
+                <i class="ri-disc-line" id="album-fallback"></i>
+            </div>
+            <div class="meta-text">
+                <h1 class="track-title" id="track-title">AUDIOCONTROL</h1>
+                <p class="track-artist" id="track-artist">GLOBAL MUSIC CONTROL</p>
+            </div>
+        </div>
+
+        <div class="center-deck">
+            <div class="player-interface active" id="player-interface">
+                <button class="player-btn" id="btn-prev"><i class="ri-skip-back-mini-fill"></i></button>
+                <button class="player-btn master-play" id="btn-play" title="Toggle Playback">
+                    <i class="ri-play-mini-fill" id="play-icon"></i>
+                </button>
+                <button class="player-btn" id="btn-next"><i class="ri-skip-forward-mini-fill"></i></button>
+                
+                <div class="visualizer-container">
+                    <canvas id="audio-canvas"></canvas>
+                </div>
+            </div>
+            
+            <div class="config-interface" id="config-interface">
+                <div class="config-group">
+                    <span class="config-label">SYSTEM THEME</span>
+                    <div class="swatch-container">
+                        <button class="color-swatch active" data-hex="#ffffff" data-glow="rgba(255, 255, 255, 0.4)" style="--swatch-color: #ffffff;"></button>
+                        <button class="color-swatch" data-hex="#e63946" data-glow="rgba(230, 57, 70, 0.4)" style="--swatch-color: #e63946;"></button>
+                        <button class="color-swatch" data-hex="#1db954" data-glow="rgba(29, 185, 84, 0.4)" style="--swatch-color: #1db954;"></button>
+                        <button class="color-swatch" data-hex="#00e5ff" data-glow="rgba(0, 229, 255, 0.4)" style="--swatch-color: #00e5ff;"></button>
+                        <button class="color-swatch" data-hex="#bc13fe" data-glow="rgba(188, 19, 254, 0.4)" style="--swatch-color: #bc13fe;"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="utility-status">
+            <div class="status-indicator">
+                <div class="accent-dot"></div>
+                <span>ACTIVE</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
